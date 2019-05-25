@@ -1,17 +1,24 @@
 <template>
   <require from="../resources/elements/island-list"></require>
   <require from="../resources/elements/island-form"></require>
+  <require from="../resources/elements/island-map"></require>
+
 
   <div class="ui stackable two column grid">
 
     <div class="column">
       <island-form islands.bind="islands"></island-form>
+      <donation-map></donation-map>
     </div>
 
     <div class="column">
-      <island-list islands.bind="islands"></island-list>
+      <donation-map></donation-map>
     </div>
 
+
+  </div>
+  <div class="ui stacked segment">
+    <island-list islands.bind="islands"></island-list>
   </div>
 </template>
 
