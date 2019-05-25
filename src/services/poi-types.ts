@@ -12,6 +12,11 @@ export interface Island {
   pictures: [];
 }
 
+export interface Location {
+  lat: number;
+  lng: number;
+}
+
 export interface Review {
   review: string;
   // rating: string;
