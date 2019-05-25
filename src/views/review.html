@@ -1,0 +1,22 @@
+<template>
+  <require from="../resources/elements/review-list"></require>
+  <require from="../resources/elements/review-form"></require>
+  <require from="../resources/elements/total-reviewed"></require>
+
+  <div class="ui stackable three column grid">
+    <div class="seven wide column">
+      <!--rating-options.bind="ratingOptions"-->
+      <!--reviews.bind="reviews"-->
+      <review-form best-for-options.bind="bestForOptions" islands.bind="islands"></review-form>
+    </div>
+
+    <div class="two wide column">
+      <!--total.bind="total"-->
+      <total-reviewed></total-reviewed>
+    </div>
+
+    <div class="seven wide column">
+      <review-list reviews.bind="reviews"></review-list>
+    </div>
+  </div>
+</template>
