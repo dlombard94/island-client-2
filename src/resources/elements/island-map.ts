@@ -4,7 +4,7 @@ import { LeafletMap } from '../../services/leaflet-map';
 
 export class IslandMap {
   mapId = 'islands-map';
-  mapHeight = 300;
+  mapHeight = 445;
   map: LeafletMap;
 
   constructor(private ea: EventAggregator) {}

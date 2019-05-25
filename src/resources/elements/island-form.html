@@ -1,5 +1,7 @@
 <template>
 
+  <require from="./coordinates"></require>
+
   <form submit.trigger="addIsland()" class="ui stacked segment form">
     <h2 class="ui dividing header"> Add an Island </h2>
 
@@ -21,6 +23,8 @@
         </select>
       </div>
     </div>
+
+    <coordinates location.two-way="location"></coordinates>
 
     <!--<div class="two fields">-->
     <!--<div class="field">-->

@@ -1,7 +1,7 @@
 import {inject, Aurelia} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 import {PLATFORM} from 'aurelia-pal';
-import {Island, Review} from "./poi-types";
+import {Island, Review, Location} from "./poi-types";
 import {HttpClient} from 'aurelia-http-client';
 import {EventAggregator} from 'aurelia-event-aggregator';
 import {TotalUpdate} from "./messages";
@@ -32,12 +32,16 @@ export class ReviewService {
     console.log (this.islands);
   }
 
-  async createIsland(name: string, area: number, category: string, description: string) {
+  async createIsland(name: string, area: number, category: string, description: string, location: Location) {
     const island = {
       name: name,
       area: area,
       category: category,
       description: description
+    };
+    const islandLocation = {
+      lat: location.lat,
+      lng: location.lng
     };
     const response = await this.httpClient.post('/api/islands', island);
     const newIsland = await response.content;
