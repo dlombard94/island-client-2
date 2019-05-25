@@ -1,4 +1,4 @@
-import {Location} from "./poi-types";
+import {Location, Island} from "./poi-types";
 
 export class TotalUpdate {
   total: number;
@@ -9,7 +9,9 @@ export class TotalUpdate {
 
 export class IslandLocation {
   location: Location;
+  // island: Island;
   constructor(location: Location) {
     this.location = location;
+    // this.island = island;
   }
 }

@@ -40,6 +40,7 @@ export class ReviewService {
       description: description
     };
     const islandLocation = {
+
       lat: location.lat,
       lng: location.lng
     };

@@ -30,5 +30,6 @@ export class IslandMap {
       minZoom: 7
     };
     this.map = new LeafletMap(this.mapId, mapConfig, 'Terrain');
+    this.map.showZoomControl();
   }
 }
