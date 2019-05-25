@@ -4,7 +4,7 @@ import {PLATFORM} from 'aurelia-pal';
 import {Island, Review, Location} from "./poi-types";
 import {HttpClient} from 'aurelia-http-client';
 import {EventAggregator} from 'aurelia-event-aggregator';
-import {TotalUpdate} from "./messages";
+import {TotalUpdate, IslandLocation} from "./messages";
 import {log} from "util";
 
 
@@ -46,6 +46,9 @@ export class ReviewService {
     const response = await this.httpClient.post('/api/islands', island);
     const newIsland = await response.content;
     this.islands.push(newIsland);
+    this.ea.publish(new IslandLocation(islandLocation));
+    console.log('New Island Added at lat: ' + islandLocation.lat + ', lng: ' + islandLocation.lng);
+
   }
 
   async review( review: string, bestFor: string, island: Island) {
