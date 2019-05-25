@@ -12,6 +12,7 @@ import {log} from "util";
 export class ReviewService {
   islands : Island[] = [];
   reviews: Review[] =[];
+  locations: Location[] = [];
   bestForOptions =   ['Poor','Below Average', 'Average', 'Above Average', 'Excellent'];
   total = this.reviews.length;
 
@@ -47,6 +48,7 @@ export class ReviewService {
     const response = await this.httpClient.post('/api/islands', island);
     const newIsland = await response.content;
     this.islands.push(newIsland);
+    this.locations.push(islandLocation);
     this.ea.publish(new IslandLocation(islandLocation));
     console.log('New Island Added at lat: ' + islandLocation.lat + ', lng: ' + islandLocation.lng);
 

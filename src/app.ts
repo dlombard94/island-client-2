@@ -22,6 +22,13 @@ export class App {
         title: 'Reviews'
       },
       {
+        route: 'map',
+        name: 'map',
+        moduleId: PLATFORM.moduleName('views/map'),
+        nav: true,
+        title: 'Map'
+      },
+      {
         route: 'logout',
         name: 'logout',
         moduleId: PLATFORM.moduleName('views/logout'),
