@@ -23,7 +23,7 @@ export class ReviewService {
     private router: Router
   ) {
     httpClient.configure(http => {
-      http.withBaseUrl('http://dlombard:3000');
+      http.withBaseUrl('https://radiant-beach-42417.herokuapp.com');
     });
   }
 
