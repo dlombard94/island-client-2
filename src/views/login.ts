@@ -3,8 +3,8 @@ import { ReviewService } from '../services/review-service';
 
 @inject(ReviewService)
 export class Login {
-  email = 'marge@simpson.com';
-  password = 'secret';
+  email = 'barney@simpson.com';
+  password = 'secret1';
   prompt = '';
 
   constructor(private rs: ReviewService) {}
