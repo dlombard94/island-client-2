@@ -22,7 +22,7 @@ export class Start {
         name: 'signup',
         moduleId: PLATFORM.moduleName('views/signup'),
         nav: true,
-        title: 'Signup'
+        title: 'Sign-up'
       }
     ]);
     this.router = router;
